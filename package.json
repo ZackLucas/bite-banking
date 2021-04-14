@@ -1,0 +1,12 @@
+{
+  "name": "bytebanking",
+  "version": "1.0.0",
+  "description": "Projeto do bytebanking para seus clientes",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Lucas Zacarias",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
