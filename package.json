@@ -7,6 +7,6 @@
   "author": "Lucas Zacarias",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "clear && node index.js"
   }
 }

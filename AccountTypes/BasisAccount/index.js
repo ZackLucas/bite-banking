@@ -1,8 +1,14 @@
+// Classe abstrata = Não pode ser instaciada diretamente, mas 
+//  sim usada extendida por outra
 export class BasisAccount {
   constructor(saldoInicial, cliente, agencia) {
-    this._saldo = saldoInicial;
+    if (this.constructor === BasisAccount) {
+      throw new Error("Você não pode instanciar um objeto do tipo Conta");
+    }
+
     this._cliente = cliente;
     this._agencia = agencia;
+    this._saldo = saldoInicial;
   }
 
   // Acessores
@@ -20,10 +26,9 @@ export class BasisAccount {
     return this._saldo;
   }
 
-  // Métodos
+  // Método Abstrato
   toWithdraw(amount) {
-    const feeToPay = 1;
-    return this._toWithdraw(amount, feeToPay);
+    throw new Error('O método Sacar da conta é abstrato');
   }
 
   _toWithdraw(amount, feeToPay) {
